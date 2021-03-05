@@ -1,10 +1,11 @@
 <template>
-  <div class="container">
+  <div class="search-container">
     <input
-      class="searchBar"
-      placeholder="Buscar por región"
-      @keyup="$emit('search-data', search)"
-      v-model="search"
+      class="search-bar"
+      placeholder="Buscar por municipio"
+      @keyup="$emit('search-data', searchText)"
+      @keyup.enter="$emit('search-data', searchText)"
+      v-model="searchText"
       type="text"
     />
   </div>
@@ -15,7 +16,7 @@ export default {
   name: "SearchBar",
   data() {
     return {
-      search: "",
+      searchText: "",
     };
   },
   emmits: ["search-data"],
@@ -23,19 +24,17 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  width: 50vw;
-  margin: auto;
+.search-container {
+  margin: 30px 0;
   text-align: center;
 }
-.searchBar {
-  font-family: "Roboto", sans-serif;
-  border: #2e2e31 2px solid;
+.search-bar {
+  background-color: #f6f5f5;
+  border: solid #fff 2px;
   border-radius: 15px;
-  background-color: #fcfaff;
-  padding: 5px 10px;
-  width: 150px;
-  text-align: center;
+  font-family: "Roboto", sans-serif;
   outline: none;
+  padding: 8px 12px;
+  width: 150px;
 }
 </style>

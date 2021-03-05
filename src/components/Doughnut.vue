@@ -1,7 +1,16 @@
 <template>
-  <div class="chart-wrapper">
-    <h1>{{ searchResult[0] }}</h1>
-    <canvas id="chart"></canvas>
+  <div class="chart-summary">
+    <div class="chart-wrapper">
+      <h1>{{ searchResult[0] }}</h1>
+      <canvas id="chart"></canvas>
+    </div>
+    <div>
+      <h2>Resumen</h2>
+      <hr />
+      <p>Registros esperados: {{ searchResult[1] * 2 }}</p>
+      <p>Registros actuales: {{ searchResult[1] }}</p>
+      <p>Registros faltantes: {{ searchResult[1] }}</p>
+    </div>
   </div>
 </template>
 
@@ -22,7 +31,7 @@ export default {
           datasets: [
             {
               data: [this.searchResult[1], this.searchResult[1] * 2],
-              backgroundColor: ["#ffbe0f", "#fa1e0e"],
+              backgroundColor: ["#276678", "#d3e0ea"],
               borderWidth: 3,
             },
           ],
@@ -52,20 +61,24 @@ h1 {
   font-size: 1.6rem;
 }
 
-.chart-wrapper {
+h2 {
+  text-align: center;
+  font-size: 1.4rem;
+}
+p {
+  font-size: 1rem;
+}
+
+.chart-summary {
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  text-align: center;
+  margin: auto;
 }
-
-@media all and (min-width: 600px) {
-  h1 {
-    font-size: 2.2rem;
-  }
-  .chart-wrapper {
-    width: 70%;
-  }
+.chart-wrapper {
+  padding-bottom: 30px;
+  width: 60%;
 }
 </style>
