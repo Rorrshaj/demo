@@ -3997,9 +3997,6 @@
             "id": "54s5a2gJMT"
         },
         {
-            "Region": "Cuautitlán Izcalli",
-            "id": "IiwnObFoZQ"
-        }{
             "Region": "Texcoco",
             "id": "lFloZhlxyr"
         },
@@ -7995,5 +7992,9 @@
             "Region": "Chimalhuacán",
             "id": "54s5a2gJMT"
         },
+        {
+            "Region": "Cuautitlán Izcalli",
+            "id": "IiwnObFoZQ"
+        }
     ]
 }
