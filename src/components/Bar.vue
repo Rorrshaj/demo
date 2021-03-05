@@ -16,7 +16,7 @@ export default {
   data() {
     return {
       chartData: {
-        type: "bar",
+        type: "horizontalBar",
         data: {
           labels: [...this.generalData.keys()],
           datasets: [
