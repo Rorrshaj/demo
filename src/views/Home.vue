@@ -67,6 +67,6 @@ export default {
 
 <style scoped>
 .chart-container {
-  margin: 0 0 0 220px;
+  margin: 110px 0 0 0;
 }
 </style>

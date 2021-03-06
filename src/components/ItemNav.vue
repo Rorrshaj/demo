@@ -18,20 +18,14 @@ export default {
 
 <style scoped>
 li {
-  padding: 5px 0;
+  padding: 5px;
   cursor: pointer;
   font-size: 1.2rem;
   text-align: center;
   list-style: none;
-  border-top: solid #ffffff 2px;
-  border-bottom: solid #ffffff 2px;
-}
-
-li span {
-  color: #276678;
 }
 
 li:hover {
-  background-color: #b6cbdb;
+  border-bottom: 2px solid #276678;
 }
 </style>

@@ -2,7 +2,7 @@
   <div class="search-container">
     <input
       class="search-bar"
-      placeholder="Buscar por municipio"
+      placeholder="Buscar por región"
       @keyup="$emit('search-data', searchText)"
       @keyup.enter="$emit('search-data', searchText)"
       v-model="searchText"
@@ -24,17 +24,15 @@ export default {
 </script>
 
 <style scoped>
-.search-container {
-  margin: 30px 0;
-  text-align: center;
-}
 .search-bar {
-  background-color: #f6f5f5;
-  border: solid #fff 2px;
-  border-radius: 15px;
+  border: 2px solid;
+  border-radius: 20px;
+  background-color: transparent;
   font-family: "Roboto", sans-serif;
+  font-size: 1rem;
   outline: none;
   padding: 8px 12px;
+  text-align: center;
   width: 150px;
 }
 </style>

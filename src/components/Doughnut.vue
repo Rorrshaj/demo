@@ -70,15 +70,14 @@ p {
 }
 
 .chart-summary {
-  display: flex;
-  flex-flow: column;
   align-items: center;
+  display: flex;
+  flex-flow: row wrap;
   justify-content: center;
   text-align: center;
-  margin: auto;
+  
 }
 .chart-wrapper {
-  padding-bottom: 30px;
-  width: 60%;
+  width: 70%;
 }
 </style>

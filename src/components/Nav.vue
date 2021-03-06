@@ -1,7 +1,7 @@
 <template>
   <div class="nav-container">
-    <SearchBar @search-data="searchData" />
     <ItemNav @toggle-chart="$emit('toggle-chart')" v-for="label in labels" :key="label" :label="label"/>
+    <SearchBar @search-data="searchData" />
   </div>
 </template>
 
@@ -17,7 +17,7 @@ export default {
   },
   data () {
     return {
-      labels: ['Regiones'],
+      labels: ['Regiones +'],
     }
   },
   methods: {
@@ -31,11 +31,13 @@ export default {
 
 <style scoped>
 .nav-container {
-  background-color: #d3e0ea;
-  height: 100%;
-  left: 0;
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  padding: 30px 0 0 0;
   position: fixed;
   top: 0;
-  width: 220px;
+  width: 100vw;
 }
 </style>
